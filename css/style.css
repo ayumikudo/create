@@ -1,0 +1,779 @@
+@charset "UTF-8";
+body {
+  font-family: 'Noto Sans JP', 'Muli', sans-serif;
+  font-size: 62.5%;
+  color: #333333;
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: 'Noto Sans JP', 'Muli', sans-serif;
+  font-size: 1.6em;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* 共通パーツ */
+
+.pc_only {
+  display: block;
+}
+
+.sp_only {
+  display: none;
+}
+
+.logo img {
+  width: 130px;
+  height: auto;
+}
+
+.inquiry {
+  display: flex;
+}
+
+.inquiry li {
+  width: 200px;
+  height: auto;
+  text-align: center;
+}
+
+.inquiry li a {
+  display: block;
+  color: #fff;
+  font-size: 1.2em;
+  line-height: 150%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.inquiry li a span {
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.inquiry li:nth-child(1) a {
+  background: #4070B4;
+}
+
+.inquiry li:nth-child(2) a {
+  background: #21458A;
+}
+
+.inquiry li:nth-child(1) a:hover, .inquiry li:nth-child(2) a:hover {
+  background: #E6B322;
+}
+
+.inquiry li:nth-child(1) a span::before {
+  content: '';
+  display: inline-block;
+  background-image: url(../images/icon_tel.svg);
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+.inquiry li:nth-child(2) a span::before {
+  content: '';
+  display: inline-block;
+  background-image: url(../images/icon_mail.svg);
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+main section {
+  width: 100%;
+}
+
+main section h3 {
+  font-size: 4em;
+  font-weight: bold;
+  color: #E6B322;
+}
+
+main section h3 span {
+  display: block;
+  margin: 10px 0 20px;
+  ;
+  font-size: 0.5em;
+  color: #333333;
+}
+
+main section .description {
+  font-size: 1.4em;
+  line-height: 150%;
+}
+
+
+/* ヘッダー */
+
+header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  display: flex;
+  justify-content: flex-start;
+}
+
+header h1 {
+  margin-right: auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+header h1 img:hover {
+  opacity: 0.6;
+}
+
+header .menu_trigger, header .menu_trigger span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+
+header button {
+  position: relative;
+  z-index: 40;
+  width: 30px;
+  height: auto;
+  margin: 20px;
+}
+
+header .menu_trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #0061AB;
+  border-radius: 4px;
+}
+
+header .menu_trigger span:nth-of-type(1) {
+  top: 3px;
+}
+
+header .menu_trigger span:nth-of-type(2) {
+  top: 14px;
+}
+
+header .menu_trigger span:nth-of-type(3) {
+  top: 25px;
+}
+
+
+/* 最初のspanをマイナス45度に */
+
+header .active span:nth-child(1) {
+  top: 16px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+
+/* 2番目と3番目のspanを45度に */
+
+header .active span:nth-child(2), header .active span:nth-child(3) {
+  top: 16px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+header .active {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+header nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 30;
+  width: 300px;
+  height: 100%;
+  padding-top: 150px;
+  text-align: left;
+  font-size: 2em;
+  background: #fff;
+}
+
+header nav ul li a {
+  display: block;
+  padding: 20px;
+}
+
+header nav ul li a:hover {
+  color: #fff;
+  background: #0061AB;
+}
+
+
+/* メインビジュアル */
+
+.main_visual {
+  position: relative;
+  width: 100%;
+  height: 670px;
+  background-image: url(../images/main_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main_visual img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: auto;
+  height: 670px;
+  opacity: 0.8;
+}
+
+.main_visual h2 {
+  position: absolute;
+  top: 30%;
+  left: 100px;
+  z-index: 20;
+  color: #fff;
+  font-size: 6em;
+  font-weight: bold;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main_visual h2 span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.main_visual h2 span:nth-child(3), .main_visual h2 span:nth-child(4) {
+  font-size: 0.4em;
+  font-weight: normal;
+}
+
+
+/* アウトソーシング */
+
+#outsourcing {
+  position: relative;
+  background: #E8EEF2;
+}
+
+#outsourcing img {
+  width: 800px;
+  height: auto;
+}
+
+#outsourcing .polygon {
+  position: absolute;
+  top: 150px;
+  right: 0;
+  padding: 40px 140px;
+  background-image: url(../images/polygon_left.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+
+/* パーソン */
+
+#person .person_inner {
+  width: 1100px;
+  margin: 60px auto;
+}
+
+#person .person_inner .person_occupation {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#person .person_inner .person_occupation li {
+  position: relative;
+}
+
+#person .person_inner .person_occupation li img {
+  width: 200px;
+  height: auto;
+}
+
+#person .person_inner .person_occupation li img:hover {
+  opacity: 0.6;
+}
+
+#person .person_inner .person_occupation li:nth-child(odd) img {
+  box-shadow: 6px 6px 0px #0061AB;
+}
+
+#person .person_inner .person_occupation li:nth-child(even) img {
+  box-shadow: 6px 6px 0px #E6B322;
+}
+
+#person .person_inner .person_occupation li h4 {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #fff;
+}
+
+#person .person_inner .person_occupation li:nth-child(odd) h4 {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  padding: 10px 30px;
+  background: #0061AB;
+}
+
+#person .person_inner .person_occupation li:nth-child(even) h4 {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  padding: 10px 30px;
+  background: #E6B322;
+}
+
+#person .person_inner .person_skill {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  background: #E8EEF2;
+  margin-top: 60px;
+  padding: 40px;
+}
+
+#person .person_inner #tab1::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 50px;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid #E8EEF2;
+  border-left: 20px solid transparent;
+}
+
+#person .person_inner #tab2::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 300px;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid #E8EEF2;
+  border-left: 20px solid transparent;
+}
+
+#person .person_inner #tab3::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 520px;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid #E8EEF2;
+  border-left: 20px solid transparent;
+}
+
+#person .person_inner #tab4::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 750px;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid #E8EEF2;
+  border-left: 20px solid transparent;
+}
+
+#person .person_inner #tab5::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 970px;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid #E8EEF2;
+  border-left: 20px solid transparent;
+}
+
+#person .person_inner .person_skill .skill_01, #person .person_inner .person_skill .skill_02 {
+  width: calc(100% / 2);
+}
+
+#person .person_inner .person_skill .skill_01 {
+  padding-right: 40px;
+  border-right: 1px solid #333333;
+}
+
+#person .person_inner .person_skill .skill_01 h4 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #21458A;
+  margin-bottom: 20px;
+}
+
+#person .person_inner .person_skill .skill_02 {
+  padding-left: 40px;
+}
+
+#person .person_inner .person_skill .skill_02 h4 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #E6B322;
+  margin-bottom: 20px;
+}
+
+#person .person_inner .person_skill .skill_02 ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  text-indent: -1em;
+  margin-left: 1em;
+}
+
+
+/* サービス */
+
+#service {
+  padding-top: 80px;
+  background-image: url(../images/service_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#service .polygon {
+  padding: 40px 140px;
+  background-image: url(../images/polygon_right.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+#service ul {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+}
+
+#service ul li {
+  width: 450px;
+  height: auto;
+}
+
+#service ul li:nth-child(1) {
+  position: relative;
+  margin-right: 40px;
+}
+
+#service ul li:nth-child(2) {
+  position: relative;
+}
+
+#service ul li:nth-child(1)::before {
+  content: '業務委託';
+  display: inline-block;
+  font-size: 1.8em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 120px;
+  text-align: center;
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  ;
+  background: #E6B322;
+}
+
+#service ul li:nth-child(2)::before {
+  content: '人材派遣';
+  display: inline-block;
+  font-size: 1.8em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 120px;
+  text-align: center;
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  ;
+  background: #E6B322;
+}
+
+#service ul li img {
+  width: 450px;
+  height: auto;
+}
+
+#service ul li .description {
+  background: #fff;
+  margin-top: -1px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+
+/* フッター */
+
+footer {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-top: 80px;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 200px 200px 0 0;
+  border-color: #E6B322 transparent transparent transparent;
+}
+
+footer::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 200px 200px 0 0;
+  border-color: #E6B322 transparent transparent transparent;
+  transform: rotate(-180deg);
+}
+
+footer .logo, footer .copyright {
+  text-align: center;
+}
+
+footer .logo p {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+footer ul {
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+footer .copyright {
+  margin-bottom: -200px;
+}
+
+
+/* ########### 640px以下 ########### */
+
+@media screen and (max-width: 640px) {
+  /* 共通パーツ */
+  .pc_only {
+    display: none;
+  }
+  .sp_only {
+    display: block;
+  }
+  main section {
+    width: 100%;
+  }
+  main section h3 {
+    text-align: center;
+    font-size: 3em;
+  }
+  main section .description br {
+    display: none;
+  }
+  /* ヘッダー */
+  header .inquiry {
+    display: none;
+  }
+  header nav {
+    width: 200px;
+  }
+  .logo img {
+    width: 70px;
+    height: auto;
+  }
+  header button {
+    margin: 10px;
+  }
+  /* メインビジュアル */
+  .main_visual {
+    position: relative;
+    width: 100vw;
+    height: 70vh;
+    background-image: url(../images/main_bg_sp.png);
+    background-position: center center;
+  }
+  .main_visual img {
+    position: absolute;
+    height: 200px;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .main_visual h2 {
+    font-size: 4em;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+  }
+  .main_visual h2 span:nth-child(3) {
+    display: none;
+  }
+  .main_visual h2 span:nth-child(4) {
+    font-size: 0.3em;
+  }
+  /* アウトソーシング */
+  #outsourcing {
+    position: static;
+    display: flex;
+    flex-direction: column-reverse;
+    background: #fff;
+  }
+  #outsourcing img {
+    width: 100%;
+  }
+  #outsourcing .polygon {
+    position: static;
+    padding: 40px 40px;
+    background-image: none;
+    background: #fff;
+  }
+  /* パーソン */
+  #person .person_inner {
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 0 0;
+  }
+  #person .person_inner dl.person_card {
+    width: 100%;
+    margin-top: 40px;
+  }
+  #person .person_inner dl.person_card dt {
+    position: relative;
+    text-align: center;
+  }
+  #person .person_inner dl.person_card dt h4 {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #fff;
+  }
+  #person .person_inner dl.person_card:nth-child(odd) dt h4 {
+    position: absolute;
+    bottom: -7px;
+    left: 15%;
+    padding: 10px 30px;
+    background: #0061AB;
+  }
+  #person .person_inner dl.person_card:nth-child(even) dt h4 {
+    position: absolute;
+    bottom: -7px;
+    left: 15%;
+    padding: 10px 30px;
+    background: #E6B322;
+  }
+  #person .person_inner dl.person_card dt img {
+    width: 70%;
+    height: auto;
+  }
+  #person .person_inner dl.person_card:nth-child(odd) dt img {
+    box-shadow: 8px 8px 0px #0061AB;
+  }
+  #person .person_inner dl.person_card:nth-child(even) dt img {
+    box-shadow: 8px 8px 0px #E6B322;
+  }
+  #person .person_inner dl.person_card dd {
+    position: relative;
+    background: #E8EEF2;
+    margin-top: 40px;
+    padding: 20px;
+  }
+  #person .person_inner dl.person_card dd h4 {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 2em 0 1em;
+  }
+  /* サービス */
+  #service {
+    padding-top: 40px;
+    background-image: url(../images/service_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #service .polygon {
+    padding: 40px 40px;
+    background-image: none;
+    background: #fff;
+  }
+  #service ul {
+    display: block;
+    padding: 40px 0;
+  }
+  #service ul li {
+    width: 90%;
+  }
+  #service ul li:nth-child(1) {
+    margin: 0 auto 40px;
+  }
+  #service ul li:nth-child(2) {
+    margin: 0 auto;
+  }
+  #service ul li:nth-child(1)::before {
+    line-height: 100px;
+    left: -10px;
+    width: 100px;
+    height: 100px;
+  }
+  #service ul li:nth-child(2)::before {
+    line-height: 100px;
+    left: -10px;
+    width: 100px;
+    height: 100px;
+  }
+  #service ul li img {
+    width: 100%;
+    height: auto;
+  }
+  /* フッター */
+  footer::before {
+    border-width: 80px 80px 0 0;
+  }
+  footer::after {
+    border-width: 80px 80px 0 0;
+  }
+  footer .inquiry li a {
+    font-size: 1em;
+  }
+}
