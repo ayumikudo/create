@@ -1,8 +1,17 @@
 @charset "UTF-8";
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: 'Noto Sans JP', 'Muli', sans-serif;
-  font-size: 62.5%;
+  font-size: 1.2rem;
   color: #333333;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 a {
@@ -16,7 +25,7 @@ ul {
 
 button {
   font-family: 'Noto Sans JP', 'Muli', sans-serif;
-  font-size: 1.6em;
+  font-size: 1.6rem;
   background-color: transparent;
   outline: none;
   border: none;
@@ -52,7 +61,7 @@ button {
 .inquiry li a {
   display: block;
   color: #fff;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   line-height: 150%;
   padding: 20px;
   box-sizing: border-box;
@@ -60,7 +69,7 @@ button {
 
 .inquiry li a span {
   display: block;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-weight: bold;
   letter-spacing: 2px;
 }
@@ -86,7 +95,7 @@ button {
   background-size: contain;
   background-repeat: no-repeat;
   vertical-align: middle;
-  padding-right: 5px;
+  padding-right: 2em;
 }
 
 .inquiry li:nth-child(2) a span::before {
@@ -98,7 +107,7 @@ button {
   background-size: contain;
   background-repeat: no-repeat;
   vertical-align: middle;
-  padding-right: 5px;
+  padding-right: 2em;
 }
 
 main section {
@@ -106,7 +115,7 @@ main section {
 }
 
 main section h3 {
-  font-size: 4em;
+  font-size: 4rem;
   font-weight: bold;
   color: #E6B322;
 }
@@ -114,12 +123,12 @@ main section h3 {
 main section h3 span {
   display: block;
   margin: 10px 0 20px;
-  font-size: 0.5em;
+  font-size: 1.6rem;
   color: #333333;
 }
 
 main section .description {
-  font-size: 1.4em;
+  font-size: 1.4rem;
   line-height: 150%;
 }
 
@@ -216,7 +225,7 @@ header nav {
   height: 100%;
   padding-top: 150px;
   text-align: left;
-  font-size: 2em;
+  font-size: 2rem;
   background: #fff;
 }
 
@@ -258,7 +267,7 @@ header nav ul li a:hover {
   left: 100px;
   z-index: 20;
   color: #fff;
-  font-size: 6em;
+  font-size: 6rem;
   font-weight: bold;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -269,7 +278,7 @@ header nav ul li a:hover {
 }
 
 .main_visual h2 span:nth-child(3), .main_visual h2 span:nth-child(4) {
-  font-size: 0.4em;
+  font-size: 2rem;
   font-weight: normal;
 }
 
@@ -332,7 +341,7 @@ header nav ul li a:hover {
 }
 
 #person .person_inner .person_occupation li h4 {
-  font-size: 1.4em;
+  font-size: 1.4rem;
   font-weight: bold;
   color: #fff;
 }
@@ -422,7 +431,7 @@ header nav ul li a:hover {
 }
 
 #person .person_inner .person_skill .skill_01 h4 {
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: bold;
   color: #21458A;
   margin-bottom: 20px;
@@ -433,7 +442,7 @@ header nav ul li a:hover {
 }
 
 #person .person_inner .person_skill .skill_02 h4 {
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: bold;
   color: #E6B322;
   margin-bottom: 20px;
@@ -486,7 +495,7 @@ header nav ul li a:hover {
 #service ul li:nth-child(1)::before {
   content: '業務委託';
   display: inline-block;
-  font-size: 1.8em;
+  font-size: 1.8rem;
   font-weight: bold;
   letter-spacing: 2px;
   line-height: 120px;
@@ -504,7 +513,7 @@ header nav ul li a:hover {
 #service ul li:nth-child(2)::before {
   content: '人材派遣';
   display: inline-block;
-  font-size: 1.8em;
+  font-size: 1.8rem;
   font-weight: bold;
   letter-spacing: 2px;
   line-height: 120px;
@@ -573,7 +582,7 @@ footer .logo, footer .copyright {
 }
 
 footer .logo p {
-  font-size: 1.8em;
+  font-size: 1.8rem;
   font-weight: bold;
   margin-top: 20px;
 }
@@ -604,7 +613,7 @@ footer .copyright {
   }
   main section h3 {
     text-align: center;
-    font-size: 3em;
+    font-size: 3rem;
   }
   main section .description br {
     display: none;
@@ -640,7 +649,7 @@ footer .copyright {
     margin: auto;
   }
   .main_visual h2 {
-    font-size: 4em;
+    font-size: 4rem;
     position: absolute;
     top: 50%;
     left: 0;
@@ -652,7 +661,7 @@ footer .copyright {
     display: none;
   }
   .main_visual h2 span:nth-child(4) {
-    font-size: 0.3em;
+    font-size: 1.6rem;
   }
   /* アウトソーシング */
   #outsourcing {
@@ -685,7 +694,7 @@ footer .copyright {
     text-align: center;
   }
   #person .person_inner dl.person_card dt h4 {
-    font-size: 1.4em;
+    font-size: 1.4rem;
     font-weight: bold;
     color: #fff;
   }
@@ -720,7 +729,7 @@ footer .copyright {
     padding: 20px;
   }
   #person .person_inner dl.person_card dd h4 {
-    font-size: 1.4em;
+    font-size: 1.4rem;
     font-weight: bold;
     margin: 2em 0 1em;
   }
@@ -773,6 +782,6 @@ footer .copyright {
     border-width: 80px 80px 0 0;
   }
   footer .inquiry li a {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
